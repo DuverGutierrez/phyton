@@ -27,4 +27,5 @@ def f_recibeNumero(num):
     print(f"La suma de numeros primos es: {sumaPrimos}")
 
 num = f_recibeNumero(int(input("Ingrese numero: ")))
+#mañsdas
 
