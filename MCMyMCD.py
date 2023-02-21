@@ -56,6 +56,17 @@ def DescomponerNum(num, vector):
     
     return vectorFactores
 
+def DescomponerDiv(num):
+    vectorFactores = []
+    pos = num
+
+    for item in range(num):
+        if num %  pos == 0:
+            vectorFactores.append(pos)
+        pos -= 1
+    
+    return vectorFactores
+
 def GenerarMultiplos(num, cant):
     vectorMultiplos = []
     for item in range(1, cant*10):
@@ -106,16 +117,33 @@ print(f'Factores vector 1: {factor3}')
 print('')
 
 lista1 = GenerarMultiplos(num1, num1)
-print(f'Multiplo numero 1: {lista1}')
+#print(f'Multiplo numero 1: {lista1}')
 
 lista2 = GenerarMultiplos(num2, num1)
-print(f'Multiplo numero 2: {lista2}')
+#print(f'Multiplo numero 2: {lista2}')
 
 lista3 = GenerarMultiplos(num3, num1)
-print(f'Multiplo numero 3: {lista3}')
+#print(f'Multiplo numero 3: {lista3}')
 
 mcm = CompararListas(lista1, lista2, lista3)
 print(f'el MCM es: {mcm}')
+print('')
+
+
+listaDiv1 = DescomponerDiv(num1)
+print(f'Divisores numero 1: {listaDiv1}')
+
+listaDiv2 = DescomponerDiv(num2)
+print(f'Divisores numero 2: {listaDiv2}')
+
+listaDiv3 = DescomponerDiv(num3)
+print(f'Divisores numero 3: {listaDiv3}')
+
+mcd = CompararListas(listaDiv1, listaDiv2, listaDiv3)
+print(f'el MCD es: {mcd}')
+print('')
+
+
 
 
 
